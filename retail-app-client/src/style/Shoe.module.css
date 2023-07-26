@@ -1,0 +1,19 @@
+.button {
+    background-color: green;
+}
+
+.button {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    padding: 10px 10px;
+    border-radius: 0.3rem;
+}
+
+.button:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
