@@ -4,6 +4,9 @@ import HomePage from "./components/modules/HomePage";
 import Shoes from "./components/modules/Shoes";
 import Navbar from "./components/ui-components/Navbar";
 import AppCSS from "./style/App.module.css";
+import LoginPage from "./components/modules/LoginPage";
+import SignPage from "./components/modules/SignPage";
+import AboutPage from "./components/modules/About";
 
 function App() {
   return (
@@ -12,12 +15,11 @@ function App() {
       <div className={AppCSS.bgdiv}>
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
+          <Route path='/home' element={<HomePage />}></Route>
           <Route path='/shoes' element={<Shoes />}></Route>
-          {/* <Route path='/forecasting' element={<Forecasting />}></Route>
-        <Route path='/inflation' element={<InflationData />}></Route>
-        <Route path='/add-analysis' element={<Analaysis />}></Route>
-        <Route path='/view-analysis' element={<Dataview />}></Route>
-        <Route path='/about' element={<About />}></Route> */}
+          <Route path='/login' element={<LoginPage />}></Route>
+          <Route path='/signup' element={<SignPage />}></Route>
+          <Route path='/about' element={<AboutPage />}></Route>
         </Routes>
       </div>
     </div>

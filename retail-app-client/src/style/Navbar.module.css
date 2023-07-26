@@ -24,25 +24,34 @@
 }
 
 .navdiv {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
+    height: 40px;
+    align-items: center;
 }
 
 .childnavdivs {
     font-family: "Trebuchet MS", "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-align: center;
-    display: inline-block;
-    padding: 10px 10px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     border-radius: 1rem;
     background-color: white;
+    height: 40px;
+    padding: 0px 15px;
+    width: 100%;
 }
 
 .childnavdivs a {
     text-decoration: none;
-    color: #1e293b;
+    color: #000000;
     cursor: pointer;
     font-weight: 600;
+    display: inline-flex;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    align-items: center;
+    height: 40px;
+    width: 100%;    
 }
 
 .childnavdivs:hover {
@@ -53,6 +62,11 @@
     color: white;
 }
 
+.buttons {
+    display: inline-flex;    
+    align-items: center;
+}
+
 .logbtn {
     text-decoration: none;
     background-color: white;
@@ -60,28 +74,60 @@
     cursor: pointer;
     font-weight: 600;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
+    height: 40px;
     border-radius: 0.3rem;
+    display: inline-flex;
+    align-items: center;
 }
 
 .logbtn:hover {
-    background-color: #1e293b;
+    background-color: rgb(88, 88, 88);
     color: #fff;
+}
+
+.logbtn a {
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logbtn:hover a {
+    background-color: rgb(88, 88, 88);
+    color: #fff;    
 }
 
 .signbtn {
     margin-left: 10px;
     text-decoration: none;
-    background-color: black;
+    background-color: rgb(88, 88, 88);
     color: white;
     cursor: pointer;
     font-weight: 600;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
+    height: 40px;
     border-radius: 0.3rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.signbtn a {
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .signbtn:hover {
     background-color: white;
     color: black;
+}
+
+.signbtn:hover a {
+    /* background-color: #fff; */
+    color: #1e293b;    
 }

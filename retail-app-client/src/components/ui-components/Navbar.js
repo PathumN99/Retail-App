@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import logo from '../../Resources/ecartlogo1.jpg';
 
 export default function Navbar() {
+
     return (
         <nav className={NavbarCSS.nav}>
             <div className={NavbarCSS.logo}>
-                <Link to="/">
+                <Link to="/Home">
                     <img src={logo} alt="Logo" />
                     <p>E-CART</p>
                 </Link>
@@ -14,25 +15,29 @@ export default function Navbar() {
 
             <div className={NavbarCSS.navdiv}>
                 <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/">Home</Link>
+                    <Link className={NavbarCSS.link} to="/home">Home</Link>
                 </div>
                 <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/Shoes">Shoes</Link>
+                    <Link to="/shoes">Shoes</Link>
                 </div>
                 <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/Shoes">Apparel</Link>
+                    <Link to="/shoes">Apparel</Link>
                 </div>
                 <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/Shoes">Accessories</Link>
+                    <Link to="/shoes">Accessories</Link>
                 </div>
                 <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/Shoes">About</Link>
+                    <Link to="/about">About</Link>
                 </div>
             </div>
 
-            <div>
-                <button className={NavbarCSS.logbtn}>Login</button>
-                <button className={NavbarCSS.signbtn}>Sign up</button>
+            <div className={NavbarCSS.buttons}>
+                <button className={NavbarCSS.logbtn}>
+                    <Link to="/login">Login</Link>
+                </button>
+                <button className={NavbarCSS.signbtn}>
+                    <Link to="/signup">Sign Up</Link>
+                </button>
             </div>
 
 
