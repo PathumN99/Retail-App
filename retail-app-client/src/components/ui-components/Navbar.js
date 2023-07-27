@@ -1,8 +1,18 @@
 import NavbarCSS from "../../style/Navbar.module.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../Resources/ecartlogo1.jpg';
 
 export default function Navbar() {
+
+    const navigate = useNavigate();
+
+    const loginClick = () => {
+        navigate('/login');
+    };
+
+    const signupClick = () => {
+        navigate('/signup');
+    };
 
     return (
         <nav className={NavbarCSS.nav}>
@@ -14,29 +24,39 @@ export default function Navbar() {
             </div>
 
             <div className={NavbarCSS.navdiv}>
-                <div className={NavbarCSS.childnavdivs}>
-                    <Link className={NavbarCSS.link} to="/home">Home</Link>
-                </div>
-                <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/shoes">Shoes</Link>
-                </div>
-                <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/shoes">Apparel</Link>
-                </div>
-                <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/shoes">Accessories</Link>
-                </div>
-                <div className={NavbarCSS.childnavdivs}>
-                    <Link to="/about">About</Link>
-                </div>
+                <Link className={NavbarCSS.link} to="/home">
+                    <div className={NavbarCSS.childdivs}>
+                        Home
+                    </div>
+                </Link>
+                <Link className={NavbarCSS.link} to="/shoes">
+                    <div className={NavbarCSS.childdivs}>
+                        Shoes
+                    </div>
+                </Link>
+                <Link className={NavbarCSS.link} to="/apparel">
+                    <div className={NavbarCSS.childdivs}>
+                        Apparel
+                    </div>
+                </Link>
+                <Link className={NavbarCSS.link} to="/accessories">
+                    <div className={NavbarCSS.childdivs}>
+                        Accessories
+                    </div>
+                </Link>
+                <Link className={NavbarCSS.link} to="/about">
+                    <div className={NavbarCSS.childdivs}>
+                        About
+                    </div>
+                </Link>
             </div>
 
             <div className={NavbarCSS.buttons}>
-                <button className={NavbarCSS.logbtn}>
-                    <Link to="/login">Login</Link>
+                <button className={NavbarCSS.logbtn} onClick={loginClick}>
+                    Login
                 </button>
-                <button className={NavbarCSS.signbtn}>
-                    <Link to="/signup">Sign Up</Link>
+                <button className={NavbarCSS.signbtn} onClick={signupClick}>
+                    Sign Up
                 </button>
             </div>
 

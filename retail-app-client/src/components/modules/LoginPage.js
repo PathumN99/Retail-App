@@ -3,7 +3,7 @@
 export default function LoginPage() {
     return (
         <div>
-            <p>sssssssssssssssssssssssss</p>
+            <p>Loginnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>
             {/* <input>Username</input>
             <input>Password</input> */}
         </div>

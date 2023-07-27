@@ -7,6 +7,10 @@
     padding: 0px 15px;
     box-shadow: 1px 1px 10px 1px rgb(173, 173, 173);
     text-decoration: none;
+    width: 96%;
+    top: 0;
+    left: 0;    
+    position: fixed;
 }
 
 .logo img {
@@ -25,45 +29,12 @@
 
 .navdiv {
     display: inline-flex;
+    align-items: center;
     position: relative;
-    height: 40px;
-    align-items: center;
-}
-
-.childnavdivs {
-    font-family: "Trebuchet MS", "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 1rem;
-    background-color: white;
-    height: 40px;
-    padding: 0px 15px;
-    width: 100%;
-}
-
-.childnavdivs a {
-    text-decoration: none;
-    color: #000000;
-    cursor: pointer;
-    font-weight: 600;
-    display: inline-flex;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    align-items: center;
-    height: 40px;
-    width: 100%;    
-}
-
-.childnavdivs:hover {
-    background-color: rgb(119, 119, 119);
-}
-
-.childnavdivs:hover a {
-    color: white;
 }
 
 .buttons {
-    display: inline-flex;    
+    display: inline-flex;
     align-items: center;
 }
 
@@ -74,29 +45,13 @@
     cursor: pointer;
     font-weight: 600;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    /* padding: 10px 10px; */
     height: 40px;
     border-radius: 0.3rem;
-    display: inline-flex;
-    align-items: center;
 }
 
 .logbtn:hover {
     background-color: rgb(88, 88, 88);
     color: #fff;
-}
-
-.logbtn a {
-    text-decoration: none;
-    color: rgb(88, 88, 88);
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-}
-
-.logbtn:hover a {
-    background-color: rgb(88, 88, 88);
-    color: #fff;    
 }
 
 .signbtn {
@@ -107,19 +62,8 @@
     cursor: pointer;
     font-weight: 600;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    /* padding: 10px 10px; */
     height: 40px;
     border-radius: 0.3rem;
-    display: inline-flex;
-    align-items: center;
-}
-
-.signbtn a {
-    text-decoration: none;
-    color: white;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
 }
 
 .signbtn:hover {
@@ -127,7 +71,24 @@
     color: black;
 }
 
-.signbtn:hover a {
-    /* background-color: #fff; */
-    color: #1e293b;    
+.childdivs {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin: 10px 9px;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    font-family: "Trebuchet MS", "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.link {
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.link:hover {
+    background-color: rgb(105, 105, 105);
+}
+
+.link:hover .childdivs {
+    color: white;
 }

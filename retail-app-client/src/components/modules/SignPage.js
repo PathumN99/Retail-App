@@ -3,7 +3,7 @@
 export default function SignPage() {
     return (
         <div>
-            <p>csaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <p>Signupppppppppppppppppppppppppp</p>
             {/* <input>Username</input>
             <input>Password</input> */}
         </div>
