@@ -11,8 +11,8 @@ using RetailAppServer.Models;
 namespace RetailAppServer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230724153002_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20230728093319_Migration1")]
+    partial class Migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,10 @@ namespace RetailAppServer.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
