@@ -1,0 +1,58 @@
+.modalBackground {
+    position: absolute;
+    margin-top: 20px;
+    background-color: white;    
+    height: 83%;
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    /* box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;  */
+}
+
+.modalContainer {
+    display: flex;
+    background-color: rgb(233, 233, 233);
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    padding: 25px 45px;
+    border-radius: 0.7rem;
+}
+
+.confirmBtn {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    height: 40px;
+    width: 80px;
+    border-radius: 0.3rem;
+    margin: 4px;
+}
+
+.confirmBtn:hover {
+    background-color: rgb(88, 88, 88);
+    color: #fff;
+}
+
+.cancelBtn {
+    text-decoration: none;
+    background-color: white;
+    color: rgb(252, 7, 7);
+    cursor: pointer;
+    font-weight: 600;
+    border-color: red;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    height: 40px;
+    width: 80px;
+    border-radius: 0.3rem;
+    margin: 4px;
+}
+
+.cancelBtn:hover {
+    background-color: red;
+    color: #fff;
+}

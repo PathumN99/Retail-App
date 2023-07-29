@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SignCSS from "../../style/signup.module.css"
 import Axios from "axios";
+import Modal from "../ui-components/Modal";
 
 export default function SignPage() {
 
@@ -9,6 +10,9 @@ export default function SignPage() {
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [address, setAddress] = useState("");
+    const [modalDisplay, setModalDisplay] = useState(false);
+
+    const modalMessage = "Do You Want to Confirm?";
 
     function handleName(event) {
         setName(event.target.value);
@@ -24,6 +28,9 @@ export default function SignPage() {
     }
     function handleAddress(event) {
         setAddress(event.target.value);
+    }
+    function invokeModal() {
+        setModalDisplay(true);
     }
 
     let dataObject = {
@@ -76,8 +83,13 @@ export default function SignPage() {
                         value={password} onChange={handlePassword} />
                 </div>
 
-                <button className={SignCSS.button} onClick={submitData}>Sign Up</button>
+                <button className={SignCSS.button} onClick={invokeModal}>Sign Up</button>
             </div>
+            {(modalDisplay === true) ? <Modal
+                display={setModalDisplay}
+                onConfirm={submitData}
+                message={modalMessage}
+            /> : null}
         </div>
     )
 }

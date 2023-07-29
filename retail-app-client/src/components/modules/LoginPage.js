@@ -1,11 +1,15 @@
 import { useState } from "react"
 import LoginCSS from "../../style/Login.module.css"
+import Modal from "../ui-components/Modal";
 
 
 export default function LoginPage() {
 
     const [username, setUsername] = useState("");
     const [password, setpassword] = useState("");
+    const [modalDisplay, setModalDisplay] = useState(false);
+
+    const modalMessage = "Are You Sure?";
 
     function handleUsername(event) {
         setUsername(event.target.value);
@@ -15,8 +19,12 @@ export default function LoginPage() {
         setpassword(event.target.value);
     }
 
-    function handleClick() {
-        console.log("username: " + username, "password: " + password);
+    function handleClick() {        
+        setModalDisplay(true);
+    }
+
+    function onConfirmation() {        
+        console.log("You confirmedddddddddddddddddddddddddd")
     }
 
     return (
@@ -32,9 +40,14 @@ export default function LoginPage() {
                     <input placeholder="" className={LoginCSS.input} name="password" type="text" value={password} onChange={handlePsassword} />
                 </div>
 
-
                 <button className={LoginCSS.button} onClick={handleClick}>Login</button>
             </div>
+            {(modalDisplay === true) ? <Modal 
+            display={setModalDisplay} 
+            onConfirm={onConfirmation} 
+            message={modalMessage}
+            /> : null}
+            {/* {modal && <Modal modelState={setModal} />} */}
         </div>
     )
 }
