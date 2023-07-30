@@ -11,6 +11,7 @@ export default function SignPage() {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [address, setAddress] = useState("");
     const [modalDisplay, setModalDisplay] = useState(false);
+    const [error, setError] = useState(false)
 
     const modalMessage = "Do You Want to Confirm?";
 
@@ -30,7 +31,12 @@ export default function SignPage() {
         setAddress(event.target.value);
     }
     function invokeModal() {
-        setModalDisplay(true);
+        if (name.length === 0 || email.length === 0 || phoneNumber.length === 0 || password.length === 0) {
+            setError(true);
+            console.log("Error : Validation Error!");
+        } else {
+            setModalDisplay(true);
+        }
     }
 
     let dataObject = {
@@ -41,17 +47,28 @@ export default function SignPage() {
         address: address
     }
 
+    // useEffect(() => {
+    //     setError(name.length === 0 || email.length === 0 || phoneNumber.length === 0 || password.length === 0);
+    // }, [name, email, phoneNumber, password]);
+    // with the dependency array [name, email, phoneNumber, password], we ensure that the setError logic 
+    // runs only when one of the form fields changes, preventing the infinite loop of re-renders.
+
     function submitData() {
-        Axios.post("http://localhost:5105/api/User", dataObject).then((response) => {
-            console.log("Submitted Data: ", response);
-            setName("");
-            setPassword("");
-            setEmail("");
-            setPhoneNumber("");
-            setAddress("");
-        }).catch((error) => {
-            console.log(error);
-        })
+        if (name.length === 0 || email.length === 0 || phoneNumber.length === 0 || password.length === 0) {
+            console.log("Error : Validation Error!");
+        } else {
+            Axios.post("http://localhost:5105/api/User", dataObject).then((response) => {
+                console.log("Submitted Data: ", response);
+                setName("");
+                setPassword("");
+                setEmail("");
+                setPhoneNumber("");
+                setAddress("");
+                setError(false);
+            }).catch((error) => {
+                console.log(error);
+            })
+        }
     }
 
     return (
@@ -62,26 +79,50 @@ export default function SignPage() {
                     <input placeholder="" className={SignCSS.input} name="name" type="text"
                         value={name} onChange={handleName} />
                 </div>
+                {(error && name.length === 0) ?
+                    <div>
+                        <label className={SignCSS.errMsg}>Username Should not be Empty!</label>
+                    </div>
+                    : null}
+
                 <div>
                     <label className={SignCSS.label}>E-mail</label>
                     <input placeholder="" className={SignCSS.input} name="email" type="text"
                         value={email} onChange={handleEmail} />
                 </div>
+                {(error && email.length === 0) ?
+                    <div>
+                        <label className={SignCSS.errMsg}>Email Should not be Empty!</label>
+                    </div>
+                    : null}
+
                 <div>
                     <label className={SignCSS.label}>Phone Number</label>
                     <input placeholder="" className={SignCSS.input} name="phoneNumber" type="text"
                         value={phoneNumber} onChange={handlePhoneNumber} />
                 </div>
+                {(error && phoneNumber.length === 0) ?
+                    <div>
+                        <label className={SignCSS.errMsg}>Phone Number Should not be Empty!</label>
+                    </div>
+                    : null}
+
                 <div>
                     <label className={SignCSS.label}>Address</label>
                     <input placeholder="" className={SignCSS.input} name="address" type="text"
                         value={address} onChange={handleAddress} />
                 </div>
+
                 <div>
                     <label className={SignCSS.label}>Password</label>
                     <input placeholder="" className={SignCSS.input} name="password" type="text"
                         value={password} onChange={handlePassword} />
                 </div>
+                {(error && password.length === 0) ?
+                    <div>
+                        <label className={SignCSS.errMsg}>Password Should not be Empty!</label>
+                    </div>
+                    : null}
 
                 <button className={SignCSS.button} onClick={invokeModal}>Sign Up</button>
             </div>
