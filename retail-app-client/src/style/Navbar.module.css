@@ -44,7 +44,7 @@
     color: black;
     cursor: pointer;
     font-weight: 600;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
     height: 40px;
     width: 80px;
     border-radius: 0.3rem;
@@ -62,7 +62,7 @@
     color: white;
     cursor: pointer;
     font-weight: 600;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
     height: 40px;
     width: 80px;
     border-radius: 0.3rem;

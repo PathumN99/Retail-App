@@ -1,19 +1,56 @@
-.button {
-    background-color: green;
+.grid {
+    /* position: relative; */
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 10px;
 }
 
-.button {
-    text-decoration: none;
-    background-color: white;
-    color: black;
+.gridElement {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 280px;
+    padding: 0px 3px;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.gridElement img {
+    /* position: inherit; */
+    width: 95%;
+    height: 90%;
+}
+
+.productName {
+    margin-bottom: 5px;
+}
+
+.price {
+    margin-bottom: 5px;
+}
+
+.atcBtn {
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: rgb(88, 88, 88);
     cursor: pointer;
-    font-weight: 600;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    padding: 10px 10px;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
     border-radius: 0.3rem;
+    font-weight: 600;
+    height: 35px;
+    border: 1px solid rgb(88, 88, 88);
 }
 
-.button:hover {
-    background-color: #1e293b;
-    color: #fff;
+.atcBtn:hover {
+    background-color: rgb(88, 88, 88);
+    color: white;
 }
