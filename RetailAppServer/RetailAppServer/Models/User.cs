@@ -10,7 +10,7 @@ namespace RetailAppServer.Models
 
         [Required]
         [Column(TypeName = "nvarchar(100)")]
-        public string Name { get; set; } = ""; // Default value has a emtpy string
+        public string Name { get; set; } = ""; // Default value has an emtpy string
 
         public string Password { get; set; }
 
