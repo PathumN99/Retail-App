@@ -38,6 +38,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//middleware is used to serve static files to clients directly from the web server
+//without involving the application's processing pipeline.
+app.UseStaticFiles();
+
 app.UseAuthorization();
 
 app.UseCors(MyAllowSpecificOrigins);
