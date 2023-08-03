@@ -44,6 +44,11 @@ export default function Navbar() {
                         Accessories
                     </div>
                 </Link>
+                <Link className={NavbarCSS.link} to="/products">
+                    <div className={NavbarCSS.childdivs}>
+                        Products
+                    </div>
+                </Link>
                 <Link className={NavbarCSS.link} to="/about">
                     <div className={NavbarCSS.childdivs}>
                         About

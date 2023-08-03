@@ -12,9 +12,11 @@ import Shoe10 from "../../Resources/Shoes/Air-Jordan-1-Retro-High-OG.jpg"
 
 export default function Shoes() {
     return (
+        <>
+        <input type="file" accept="image/*"></input>
         <div className={ShoeCSS.grid}>
             <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe1} alt="shoe1"></img></div>
+                <div className={ShoeCSS.imgContainer}><img src="http://localhost:5105/Images/Shoes/air-jordan-3-retro-palomino.jpg" alt="shoe1"></img></div>
                 <div className={ShoeCSS.productName}>Air Jordan 3 Retro Palomino</div>
                 <div className={ShoeCSS.price}>$ 175</div>
                 <button className={ShoeCSS.atcBtn}>Add to Cart</button>
@@ -74,5 +76,6 @@ export default function Shoes() {
                 <button className={ShoeCSS.atcBtn}>Add to Cart</button>
             </div>
         </div>
+        </>
     )
 }
