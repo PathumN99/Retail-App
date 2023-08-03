@@ -9,11 +9,14 @@ namespace RetailAppServer.Models
     {
         [Key]
         public int Id { get; set; }
-       
+
+        [Required]
         public string ProductName { get; set; }
 
+        [Required]
         public int Price { get; set; }
-        
+
+        [Required]
         public ShoeBrandEnum Brand { get; set; }
         
         public string ImageName { get; set; }

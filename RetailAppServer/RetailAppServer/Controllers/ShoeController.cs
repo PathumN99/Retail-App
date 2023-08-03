@@ -12,6 +12,7 @@ namespace RetailAppServer.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _environment; //To access the project directory folders
+        string BaseUrl = "http://localhost:5105";        
 
         public ShoeController (AppDbContext context, IWebHostEnvironment environment)
         {
@@ -65,6 +66,7 @@ namespace RetailAppServer.Controllers
 
         }
 
+        //Download Image
         [HttpGet]
         [Route("download-image")]
         public async Task<IActionResult> DownloadFile(string fileName)
@@ -83,10 +85,39 @@ namespace RetailAppServer.Controllers
 
         }
 
-        /*private string GetFilePath(string productCode)
+        [HttpGet]
+        [Route("get-image-path")]
+        public async Task<string> GetImagePath()
         {
-            return this._environment.WebRootPath + "\\Imgaes\\Shoes" + productCode;
-        }*/
+            return this._environment.WebRootPath + ".jpg";
+            //return this._environment.WebRootPath + "\\Imgaes\\Shoes" + productCode;
+        }
+
+        [HttpPost]
+        [Route("upload")]
+        public async Task<IActionResult> Upload(IFormFile image)
+        {
+            if (image == null || image.Length <= 0)
+            {
+                return BadRequest("Invalid file");
+            }
+
+            // Get the file extension (you can customize this based on your needs)
+            var fileExtension = Path.GetExtension(image.FileName);
+
+            // Generate a unique filename (you can use GUID or any other approach)
+            var fileName = $"{System.Guid.NewGuid()}{fileExtension}";
+
+            // Save the image to the server folder (you should configure the path)
+            var filePath = Path.Combine("your-server-folder-path", fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await image.CopyToAsync(stream);
+            }
+
+            return Ok(new { fileName });
+        }
 
         /*private string GetImage(string productCode)
         {
