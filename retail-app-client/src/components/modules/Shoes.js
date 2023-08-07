@@ -13,69 +13,68 @@ import Shoe10 from "../../Resources/Shoes/Air-Jordan-1-Retro-High-OG.jpg"
 export default function Shoes() {
     return (
         <>
-        <input type="file" accept="image/*"></input>
-        <div className={ShoeCSS.grid}>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src="http://localhost:5105/Images/Shoes/air-jordan-3-retro-palomino.jpg" alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 3 Retro Palomino</div>
-                <div className={ShoeCSS.price}>$ 175</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+            <div className={ShoeCSS.grid}>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src="http://localhost:5105/Images/Shoes/air-jordan-3-retro-palomino.jpg" alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 3 Retro Palomino</div>
+                    <div className={ShoeCSS.price}>$ 175</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>               
+                <div className={ShoeCSS.gridElement}>
+                    <div><img src={Shoe2} alt="shoe1"></img></div>
+                    <div className={ShoeCSS.productName}>NBA X Dunk Low EMB</div>
+                    <div className={ShoeCSS.price}>$ 180</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe3} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Dunk Low black White</div>
+                    <div className={ShoeCSS.price}>$ 150</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe4} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>AirMax 1 SC Clear Jade</div>
+                    <div className={ShoeCSS.price}>$ 190</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe5} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 7 Retro Chambray</div>
+                    <div className={ShoeCSS.price}>$ 210</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe6} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 5 Retro SE UNC</div>
+                    <div className={ShoeCSS.price}>$ 240</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe7} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 4 Retro Thunder</div>
+                    <div className={ShoeCSS.price}>$ 200</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe8} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 14 Retro Laney</div>
+                    <div className={ShoeCSS.price}>$ 135</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe9} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 11 Retro Cherry</div>
+                    <div className={ShoeCSS.price}>$ 200</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+                <div className={ShoeCSS.gridElement}>
+                    <div className={ShoeCSS.imgContainer}><img src={Shoe10} alt="Shoe"></img></div>
+                    <div className={ShoeCSS.productName}>Air Jordan 1 Retro High OG</div>
+                    <div className={ShoeCSS.price}>$ 265</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
             </div>
-            <div className={ShoeCSS.gridElement}>
-                <div><img src={Shoe2} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>NBA X Dunk Low EMB</div>
-                <div className={ShoeCSS.price}>$ 180</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe3} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Dunk Low black White</div>
-                <div className={ShoeCSS.price}>$ 150</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe4} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>AirMax 1 SC Clear Jade</div>
-                <div className={ShoeCSS.price}>$ 190</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe5} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 7 Retro Chambray</div>
-                <div className={ShoeCSS.price}>$ 210</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe6} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 5 Retro SE UNC</div>
-                <div className={ShoeCSS.price}>$ 240</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe7} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 4 Retro Thunder</div>
-                <div className={ShoeCSS.price}>$ 200</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe8} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 14 Retro Laney</div>
-                <div className={ShoeCSS.price}>$ 135</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe9} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 11 Retro Cherry</div>
-                <div className={ShoeCSS.price}>$ 200</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-            <div className={ShoeCSS.gridElement}>
-                <div className={ShoeCSS.imgContainer}><img src={Shoe10} alt="shoe1"></img></div>
-                <div className={ShoeCSS.productName}>Air Jordan 1 Retro High OG</div>
-                <div className={ShoeCSS.price}>$ 265</div>
-                <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-            </div>
-        </div>
         </>
     )
 }

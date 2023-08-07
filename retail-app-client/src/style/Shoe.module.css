@@ -40,17 +40,18 @@
 
 .atcBtn {
     margin-bottom: 20px;
-    background-color: #fff;
-    color: rgb(88, 88, 88);
+    background-color: rgb(112, 112, 112);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: all .4s cubic-bezier(.4, 0, .2, 1);
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     font-weight: 600;
-    height: 35px;
-    border: 1px solid rgb(88, 88, 88);
+    height: 36px;
+    width: 130px;
+    border: 2px solid rgb(112, 112, 112);
 }
 
 .atcBtn:hover {
-    background-color: rgb(88, 88, 88);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
