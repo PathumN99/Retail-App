@@ -7,7 +7,7 @@ export default function HomePage() {
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex ea commodo consequat.</p>
-            <button className={HomeCSS.button}>Button</button>
+            <button className="btn btn-primary">Button</button>
             <p>Homeeeeeeeeeeeeeee Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
