@@ -9,18 +9,61 @@ import Shoe7 from "../../Resources/Shoes/Air-Jordan-4-Retro-Thunder.jpg"
 import Shoe8 from "../../Resources/Shoes/Air-Jordan-14-Retro-Laney.jpg"
 import Shoe9 from "../../Resources/Shoes/Air-Jordan-11-Retro-Cherry.jpg"
 import Shoe10 from "../../Resources/Shoes/Air-Jordan-1-Retro-High-OG.jpg"
+import Axios from "axios"
+import { useEffect, useState } from "react"
 
 export default function Shoes() {
+
+    // const [shoeData, setShoeData] = useState([]);
+
+    // useEffect(() => {
+    //     Axios.get('your_api_endpoint')
+    //         .then(response => {
+    //             setShoeData(response.data);
+    //         })
+    //         .catch(error => {
+    //             console.error("Error fetching data:", error);
+    //         });
+    // }, []);
+
+    const shoeData = [
+        {
+            name: "Sample Name 1",
+            address: "Sample Address 1"
+        },
+        {
+            name: "Sample Name 2",
+            address: "Sample Address 2"
+        },
+        {
+            name: "Sample Name 3",
+            address: "Sample Address 3"
+        },
+        {
+            name: "Sample Name 4",
+            address: "Sample Address 4"
+        }
+    ];
+
     return (
-        <>
-            <div className={ShoeCSS.grid}>
-                <div className={ShoeCSS.gridElement}>
+        <div className={ShoeCSS.grid}>
+            {/* <div className={ShoeCSS.gridElement}>
                     <div className={ShoeCSS.imgContainer}><img src="http://localhost:5105/Images/Shoes/air-jordan-3-retro-palomino.jpg" alt="Shoe"></img></div>
                     <div className={ShoeCSS.productName}>Air Jordan 3 Retro Palomino</div>
                     <div className={ShoeCSS.price}>$ 175</div>
                     <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-                </div>               
-                <div className={ShoeCSS.gridElement}>
+                </div> */}
+
+            {/* should use return statement in the map function if the curly brases are used */}
+            {shoeData.map((item, index) => {
+                return <div key={index} className={ShoeCSS.gridElement}>
+                    <div><img src={Shoe2} alt="shoe1"></img></div>
+                    <div className={ShoeCSS.productName}>{item.name}</div>
+                    <div className={ShoeCSS.price}>{item.address}</div>
+                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                </div>
+            })}
+            {/* <div className={ShoeCSS.gridElement}>
                     <div><img src={Shoe2} alt="shoe1"></img></div>
                     <div className={ShoeCSS.productName}>NBA X Dunk Low EMB</div>
                     <div className={ShoeCSS.price}>$ 180</div>
@@ -73,8 +116,8 @@ export default function Shoes() {
                     <div className={ShoeCSS.productName}>Air Jordan 1 Retro High OG</div>
                     <div className={ShoeCSS.price}>$ 265</div>
                     <button className={ShoeCSS.atcBtn}>Add to Cart</button>
-                </div>
-            </div>
-        </>
+                </div> */}
+
+        </div>
     )
 }
