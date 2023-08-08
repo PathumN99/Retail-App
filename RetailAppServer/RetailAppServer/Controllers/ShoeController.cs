@@ -20,6 +20,21 @@ namespace RetailAppServer.Controllers
             _environment = environment;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Shoe>>> GetShoeData()
+        {
+            return await _context.Shoe.ToListAsync();
+        }
+
+        [HttpPost]
+        [Route("insert-product")]
+        public async Task<ActionResult<Shoe>> CreateShoeProduct(Shoe shoe)
+        {
+            _context.Shoe.Add(shoe);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction("GetShoeData", new { id = shoe.Id }, shoe);
+        }
+
         //Image upload API
         [HttpPost]
         [Route("image-upload")]
@@ -91,52 +106,7 @@ namespace RetailAppServer.Controllers
         {
             return this._environment.WebRootPath + ".jpg";
             //return this._environment.WebRootPath + "\\Imgaes\\Shoes" + productCode;
-        }
-
-        [HttpPost]
-        [Route("upload")]
-        public async Task<IActionResult> Upload(IFormFile image)
-        {
-            if (image == null || image.Length <= 0)
-            {
-                return BadRequest("Invalid file");
-            }
-
-            // Get the file extension (you can customize this based on your needs)
-            var fileExtension = Path.GetExtension(image.FileName);
-
-            // Generate a unique filename (you can use GUID or any other approach)
-            var fileName = $"{System.Guid.NewGuid()}{fileExtension}";
-
-            // Save the image to the server folder (you should configure the path)
-            var filePath = Path.Combine("your-server-folder-path", fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await image.CopyToAsync(stream);
-            }
-
-            return Ok(new { fileName });
-        }
-
-        /*private string GetImage(string productCode)
-        {
-            string ImageUrl = string.Empty;
-            string HostUrl = "http://localhost:5105/";
-            string filePath = GetFilePath(productCode);
-            string ImagePath = filePath + "\\default.jpg";
-
-            if (!System.IO.File.Exists(ImagePath))
-            {
-                ImageUrl = HostUrl + "/Images/Shoes/default.jpg";
-            }
-            else
-            {
-                ImageUrl = HostUrl + "/Images/Shoes/" + productCode + "/";
-            }
-
-            return ImageUrl;
-        }*/
+        }                
 
     }
 }
