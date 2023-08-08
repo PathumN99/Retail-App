@@ -17,17 +17,10 @@
     padding: 0px 3px;
 }
 
-.imgContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imgContainer {   
     margin-top: 2px;
-}
-
-.gridElement img {
-    /* position: inherit; */
-    width: 95%;
-    height: 90%;
+    width: 250px;
+    height: 160px;
 }
 
 .productName {
