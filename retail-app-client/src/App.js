@@ -10,6 +10,9 @@ import AboutPage from "./components/modules/About";
 import ApparelPage from "./components/modules/Apparel";
 import AccessoriesPage from "./components/modules/Accessories";
 import ProductsPage from "./components/modules/Products";
+import ProductShoe from "./components/modules/Products/ProductShoe";
+import ProductApparel from "./components/modules/Products/ProductApparel";
+import ProductAccessories from "./components/modules/Products/ProductAccessories";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
           <Route path='/login' element={<LoginPage />}></Route>
           <Route path='/signup' element={<SignPage />}></Route>
           <Route path='/about' element={<AboutPage />}></Route>
+          <Route path='/product-shoe' element={<ProductShoe />}></Route>
+          <Route path='/product-apparel' element={<ProductApparel />}></Route>
+          <Route path='/product-accessories' element={<ProductAccessories />}></Route>
         </Routes>
       </div>
     </div>

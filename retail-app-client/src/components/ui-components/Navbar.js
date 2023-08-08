@@ -1,17 +1,34 @@
 import NavbarCSS from "../../style/Navbar.module.css"
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../Resources/ecartlogo1.jpg';
+import { useState } from "react";
 
 export default function Navbar() {
 
+    const [dropDown, setDropDown] = useState(false);
     const navigate = useNavigate();
 
     const loginClick = () => {
         navigate('/login');
     };
-
     const signupClick = () => {
         navigate('/signup');
+    };
+    const productShoe = () => {
+        navigate('/product-shoe');
+        setDropDown(!dropDown);
+    };
+    const productApparel = () => {
+        navigate('/product-apparel');
+        setDropDown(!dropDown);
+    };
+    const productAccessories = () => {
+        navigate('/product-accessories');
+        setDropDown(!dropDown);
+    };
+
+    const showDropDown = () => {
+        setDropDown(!dropDown);
     };
 
     return (
@@ -45,11 +62,18 @@ export default function Navbar() {
                         Accessories
                     </div>
                 </Link>
-                <Link className={NavbarCSS.link} to="/products">
-                    <div className={NavbarCSS.childdivs}>
-                        Products
+
+                <div className={NavbarCSS.dropDownDiv} onClick={showDropDown}>
+                    Products
+                </div>
+                {(dropDown) ? (
+                    <div className={NavbarCSS.dropDownMenu}>
+                        <div className={NavbarCSS.dropDownElem} onClick={productShoe}>Shoes</div>
+                        <div className={NavbarCSS.dropDownElem} onClick={productApparel}>Apparel</div>
+                        <div className={NavbarCSS.dropDownElem} onClick={productAccessories}>Accessories</div>
                     </div>
-                </Link>
+                ) : null}
+
                 <Link className={NavbarCSS.link} to="/about">
                     <div className={NavbarCSS.childdivs}>
                         About
@@ -67,42 +91,5 @@ export default function Navbar() {
             </div>
 
         </nav>
-
-        // Bootstrap Navbar
-        // <nav className="navbar navbar-expand fixed-top"
-        //     style={{
-        //         backgroundColor: 'white',
-        //     }}>
-        //     <div className="container">
-        //         <Link to="/Home" className="navbar-brand">
-        //             <img className="img" style={{ width: '50px', height: '50px' }} src={logo} alt="Logo" />
-        //             E-CART
-        //         </Link>
-        //         <ul className="navbar-nav">
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/home">Home</Link>
-        //             </li>
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/shoes">Shoes</Link>
-        //             </li>
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/apparel">Apparel</Link>
-        //             </li>
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/accessories">Accessories</Link>
-        //             </li>
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/products">Product</Link>
-        //             </li>                    
-        //             <li className="navbar-item">
-        //                 <Link className="nav-link" to="/about">About</Link>
-        //             </li>
-        //         </ul>
-        //         <div>
-        //             <button className="btn btn-outline-secondary me-3" onClick={loginClick}>Login</button>
-        //             <button className="btn btn-outline-secondary" onClick={signupClick}>Sign Up</button>
-        //         </div>
-        //     </div>
-        // </nav>
     )
 }

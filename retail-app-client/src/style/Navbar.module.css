@@ -10,7 +10,7 @@
     width: 98%;
     height: 60px;
     top: 0;
-    left: 0;    
+    left: 0;
     position: fixed;
 }
 
@@ -91,9 +91,65 @@
 }
 
 .link:hover {
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(240, 240, 240);
 }
 
 .link:hover .childdivs {
-    color: white;
+    color: red;
+}
+
+.dropDownDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+    font-family: "Trebuchet MS", "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 77px;
+    height: 40px;
+    user-select: none;
+}
+
+.dropDownDiv:hover {
+    background-color: rgb(240, 240, 240);
+    color: red;
+}
+
+.dropDownMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 48px;
+    left: 310px;
+    border-color: #000000;
+    border-radius: 1rem;
+    background-color: white;
+    width: 120px;
+    height: 100px;
+    box-shadow: 1px 1px 10px 1px rgb(173, 173, 173);
+    user-select: none;
+}
+
+.dropDownElem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    height: 40px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dropDownElem:hover {
+    background-color: rgb(233, 233, 233);
+    color: rgb(255, 0, 0);
 }
