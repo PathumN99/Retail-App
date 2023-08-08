@@ -24,7 +24,7 @@ export default function LoginPage() {
     }
 
     function onConfirmation() {        
-        console.log("You confirmedddddddddddddddddddddddddd")
+        console.log("You confirmed")
     }
 
     return (

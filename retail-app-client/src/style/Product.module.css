@@ -1,0 +1,69 @@
+.productCard {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(243, 243, 243);
+    width: 43%;
+    padding-top: 20px;
+    margin: 20px 0px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+}
+
+.input {
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 380px;
+}
+
+.labelGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* background-color: aquamarine; */
+    margin-top: 15px;
+    margin-left: 20px;
+    /* height: 160px; */
+}
+
+.label {
+    margin-bottom: 35px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    margin-left: 20px
+}
+
+.fileUpload {
+    margin-top: 16px;
+}
+
+.button {    
+    margin-right: 20px;
+    background-color: white;
+    color: green;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
+    height: 40px;
+    width: 130px;
+    border-radius: 0.3rem;
+    border-color: green;
+}
+
+.button:hover {
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    background-color: white;
+    color: red;
+    border-color: red;
+}
