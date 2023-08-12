@@ -47,12 +47,6 @@ export default function SignPage() {
         address: address
     }
 
-    // useEffect(() => {
-    //     setError(name.length === 0 || email.length === 0 || phoneNumber.length === 0 || password.length === 0);
-    // }, [name, email, phoneNumber, password]);
-    // with the dependency array [name, email, phoneNumber, password], we ensure that the setError logic 
-    // runs only when one of the form fields changes, preventing the infinite loop of re-renders.
-
     function submitData() {
         if (name.length === 0 || email.length === 0 || phoneNumber.length === 0 || password.length === 0) {
             console.log("Error : Validation Error!");
