@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RetailAppServer.Models;
+using RetailAppServer.ServiceInterfaces;
+using RetailAppServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Enabling CORS
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+// Dependency injection for services
+builder.Services.AddScoped<IApparelService, ApparelService>();
+
 
 builder.Services.AddCors(options =>
 {

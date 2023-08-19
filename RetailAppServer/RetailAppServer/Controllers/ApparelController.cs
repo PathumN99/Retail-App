@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RetailAppServer.Models;
+using RetailAppServer.ServiceInterfaces;
 using RetailAppServer.Services;
 
 namespace RetailAppServer.Controllers
@@ -11,15 +13,24 @@ namespace RetailAppServer.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _environment; //To access the project directory folders
-        private readonly ApparelService _apparelService;
+        private readonly IApparelService _apparelService;
 
-        public ApparelController(AppDbContext context, IWebHostEnvironment environment)
+        public ApparelController(AppDbContext context, IWebHostEnvironment environment, IApparelService apparelService)
         {
             _context = context;
-            _environment = environment;        
+            _environment = environment;
+            _apparelService = apparelService;
         }
 
         [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var apparelData = await _apparelService.getAll();
+            return Ok(apparelData);
+        }
+
+        [HttpGet]
+        [Route("without-service")]
         public async Task<ActionResult<IEnumerable<Apparel>>> GetApparelData()
         {
             return await _context.Apparel.ToListAsync();
