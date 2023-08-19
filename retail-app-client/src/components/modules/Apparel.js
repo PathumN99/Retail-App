@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ShoeCSS from "../../style/Shoe.module.css"
+import ApparelCSS from "../../style/Apparel.module.css";
 import Axios from "axios";
 
 export default function ApparelPage() {
@@ -17,14 +17,14 @@ export default function ApparelPage() {
     }, []);
 
     return (
-        <div className={ShoeCSS.grid}>
+        <div className={ApparelCSS.grid}>
             {/* should use return statement in the map function if the curly brases are used */}
             {apprelData.map((item, index) => {
-                return <div key={index} className={ShoeCSS.gridElement}>
-                    <img className={ShoeCSS.imgContainer} src={item.imageUrl} alt="shoe1"></img>
-                    <div className={ShoeCSS.productName}>{item.productName}</div>
-                    <div className={ShoeCSS.price}>$ {item.price}</div>
-                    <button className={ShoeCSS.atcBtn}>Add to Cart</button>
+                return <div key={index} className={ApparelCSS.gridElement}>
+                    <img className={ApparelCSS.imgContainer} src={item.imageUrl} alt="shoe1"></img>
+                    <div className={ApparelCSS.productName}>{item.productName}</div>
+                    <div className={ApparelCSS.price}>$ {item.price}</div>
+                    <button className={ApparelCSS.atcBtn}>Add to Cart</button>
                 </div>
             })}
         </div>
