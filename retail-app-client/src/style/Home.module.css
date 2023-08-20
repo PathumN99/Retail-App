@@ -1,15 +1,97 @@
-.button {
-    text-decoration: none;
-    background-color: white;
-    color: black;
+.imgContainer {
+    display: flex;
+}
+
+.imgApparel{
+    width: 50%;   
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgba(243, 169, 22, 1));
+    width: 100vw;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(172, 172, 172));
+    width: 100vw;
+}
+
+.content3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgba(248,197,206,255));
+    width: 100vw;
+}
+
+.content4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(172, 172, 172));
+    width: 100vw;
+}
+
+.contentText1 {
+    font-weight: bolder;
+    font-size: 80px;
+    color: rgb(56, 56, 56);
+    text-shadow:
+        -1px -1px 0 white,
+        /* Top-left border */
+        1px -1px 0 rgba(243, 169, 22, 1),
+        /* Top-right border */
+        -1px 1px 0 rgba(243, 169, 22, 1),
+        /* Bottom-left border */
+        1px 1px 0 white;
+    /* Bottom-right border */
+}
+
+.contentText2 {
+    font-weight: bolder;
+    font-size: 80px;
+    color: rgb(56, 56, 56);
+    text-shadow:
+        -1px -1px 0 white,
+        /* Top-left border */
+        1px -1px 0 rgb(136, 136, 136),
+        /* Top-right border */
+        -1px 1px 0 rgb(136, 136, 136),
+        /* Bottom-left border */
+        1px 1px 0 white;
+    /* Bottom-right border */
+}
+
+.button {    
+    background-color: rgb(88, 88, 88);
+    color: #fff;
     cursor: pointer;
-    font-weight: 600;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    padding: 10px 10px;
-    border-radius: 0.3rem;
+    font-size: larger;
+    font-weight: bolder;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
+    height: 50px;
+    width: 150px;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    border-color: rgb(187, 187, 187);
 }
 
 .button:hover {
-    background-color: #1e293b;
-    color: #fff;
+    background-color: white;
+    color: rgb(88, 88, 88);
+    border-color: rgb(88, 88, 88);
 }
