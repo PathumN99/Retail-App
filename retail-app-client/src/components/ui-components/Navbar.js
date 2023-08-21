@@ -1,6 +1,7 @@
 import NavbarCSS from "../../style/Navbar.module.css"
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../../Resources/ecartlogo1.jpg';
+import cart from "../../Resources/cart.jpg";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -26,6 +27,9 @@ export default function Navbar() {
         navigate('/product-accessories');
         setDropDown(!dropDown);
     };
+    const toCart = () => {
+        navigate('/cart');
+    }
 
     const showDropDown = () => {
         setDropDown(!dropDown);
@@ -82,6 +86,9 @@ export default function Navbar() {
             </div>
 
             <div className={NavbarCSS.buttons}>
+                <div className={NavbarCSS.cartImgDiv}>
+                    <img className={NavbarCSS.cartImg} onClick={toCart} src={cart} alt="Logo"></img>
+                </div>                
                 <button className={NavbarCSS.logbtn} onClick={loginClick}>
                     Login
                 </button>

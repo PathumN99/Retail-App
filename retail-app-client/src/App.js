@@ -13,6 +13,7 @@ import ProductsPage from "./components/modules/Products";
 import ProductShoe from "./components/modules/Products/ProductShoe";
 import ProductApparel from "./components/modules/Products/ProductApparel";
 import ProductAccessories from "./components/modules/Products/ProductAccessories";
+import Cart from "./components/modules/Cart";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/product-shoe' element={<ProductShoe />}></Route>
           <Route path='/product-apparel' element={<ProductApparel />}></Route>
           <Route path='/product-accessories' element={<ProductAccessories />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
         </Routes>
       </div>
     </div>

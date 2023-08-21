@@ -45,3 +45,46 @@
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
+
+.filterContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 100px 0px 20px 50px;
+    font-weight: 600;
+    font-size: large;
+}
+
+.filterContainer label {
+    margin-right: 10px;
+}
+
+.filterBtn {
+    margin-left: 15px;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(128, 128, 128);
+    border: 2px solid rgb(128, 128, 128);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .4s cubic-bezier(.4, 0, .2, 1);
+    height: 40px;
+    width: 80px;
+    border-radius: 0.5rem;
+}
+
+.filterBtn:hover {
+    background-color: rgb(88, 88, 88);
+    color: #fff;
+}
+
+.selectField {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 20px 8px 10px;
+}
+
+.selectField option[disabled] {
+    display: none;
+}
