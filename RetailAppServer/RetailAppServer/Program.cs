@@ -21,7 +21,7 @@ var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Dependency injection for services
 builder.Services.AddScoped<IApparelService, ApparelService>();
-
+builder.Services.AddScoped<IAccessoryService, AccessoryService>();
 
 builder.Services.AddCors(options =>
 {
