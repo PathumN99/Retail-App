@@ -42,6 +42,7 @@ export default function Shoes() {
                 </div>
                 <div>
                     <button className={ShoeCSS.filterBtn}>Filter</button>
+                    <button className={ShoeCSS.filterBtn}>Clear Filter</button>
                 </div>
 
             </div>
